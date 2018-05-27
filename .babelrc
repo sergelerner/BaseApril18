@@ -2,9 +2,17 @@
   "presets": [
     ["env", {
       "targets": {
-        "node": "current"
+        "browsers": ["last 2 versions", "safari >= 7"]
       },
     }],
     "react"
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }]
   ]
 }
